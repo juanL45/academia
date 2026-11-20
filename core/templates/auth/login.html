@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block auth %}
+<div class="text-center border border-5 border-white w-auto d-inline-block p-3 text-white rounded-3" style="border-radius:10px">
+<img class="img_logo_register" src="{% static 'img/logo.png' %}" alt="My Website Logo">
+    <h1 class="auth_title">Iniciar Sesion </h1>
+    <h5 class="auth_title_slogan">Accede a tu aula virtual de capacitacion </h5>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success"> 
+    {{ message }}
+    </div>
+    {% endfor %}
+{% endif %}
+
+   <form class="login-form" method='POST' action="">
+{% csrf_token %}
+
+<input type="text" id="username" name="username" placeholder="Correo"/>
+
+
+<input type="password" id="password" name="password" placeholder="Contraseña"/>
+
+<input type="submit" value="Iniciar sesion"/>
+</form>
+No tienes una cuenta <a class="text-success" href="/registro"> Registrate</a>
+    </div>
+{% endblock %}
