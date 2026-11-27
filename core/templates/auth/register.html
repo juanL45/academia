@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Registro{% endblock %}
+
+{% block auth %}
+<div class="text-center border border-5 border-white w-auto d-inline-block p-3 text-white" style="border-radius: 10px;">
+<img class="img_logo_register" src="{% static 'img/logo.png' %}" alt="My Website Logo"/>
+    <h1 class="auth_title">Crea tu <span class="cuenta_txt"> Cuenta</span></h1>
+    <h5 class="auth_title_slogan">Comienza tu formacion profesional con nosotros </h5>
+   <form class="login-form" method='post' action="">
+        {% csrf_token %}
+
+        
+        <input type="text" name="nombres" placeholder="Nombres y apellidos"/>
+        
+        <input type="text" name="document_type" placeholder="Tipo de Documento"/>
+        <input class="flex-grow-1" type="text" name="no_documento" placeholder="Nro Documento"/>
+        
+        <!--
+        <div class="d-flex flex-row align-items-center gap-3">
+            <div class="flex-grow-1">                                    
+                <input type="text" name="document_type" placeholder="Tipo de Documento"/>
+            </div>
+
+            <input class="flex-grow-1" type="text" name="no_documento" placeholder="Nro Documento"/>
+
+        </div>
+        -->
+        <input type="email" name="email" placeholder="Correo Electronico"/>
+        <input type="text" name="telefono" placeholder="Telefono"/>
+        <input type="password" name="password1" placeholder="Contraseña"/>
+        <input type="password" name="password2" placeholder="Confirmar Contraseña"/>
+        
+<input type="submit" value="Crea Cuenta"/>
+</form>
+ya tienes una cuenta <a class="text-success" href="/login"> Iniciar Sesion</a>
+</div>    
+{% endblock %}
+
+
+{% block extra_js %}
+
+
+
+{% endblock %}

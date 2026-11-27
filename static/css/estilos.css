@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.blanco {
+  color: white;
+}
+
+.auth_template {
+    width: 50%;
+  }
+  .auth_template img{
+    width: 300px;
+    height: auto;
+  }
+  .auth_title{
+    font-size: 25px;
+  }
+  .auth_title_slogan{
+    font-size: 20px;
+  }
+.form-control {background-color: transparent; width: 100%; padding: 8px; margin-bottom: 10px; text-align: left;}
+
+.container-fluid {
+  width: 100%;
+  min-height: 100dvh;
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 3px;
+  
+  padding: 5px;
+}
+
+.parent {
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  width: 100%;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  min-height: 100vh;       /* or any explicit height */
+}
+
+.container div {  
+  padding: 10px;
+}
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container div.menu {
+  grid-area: menu;
+  height: 80vh;
+}
+.container div.content {
+  grid-area: content;
+  height: 80vh
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
+.cuenta_txt{
+    font-size: 25px;
+    color: gold;
+}
+
+.auth_template{
+  display: flex;
+  justify-content: center; /* Horizontally centers */
+  align-items: center;     /* Vertically centers */
+  margin: 0 auto;  
+   
+}
+
+.login-form{
+width: 80%;
+margin:0 auto;
+
+}
+.login-form input,label,select{
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border: 1px white solid;
+    border-radius: 10px 10px;
+    background-color: transparent;
+    color: white;
+
+}
+
+input[type="submit"] {
+  -webkit-appearance: none; /* Removes iOS Safari default gradients/borders */
+  appearance: none;
+  background-color: #4f46e5; /* Primary color (e.g., Indigo) */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.img_logo_register{
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.input-icono {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .input-icono i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none; /* Permite hacer clic "a través" del ícono hacia el input */
+  }
+
+  .input-icono input {
+    width: 100%;
+    padding: 10px 12px 10px 38px; /* El padding-left (38px) deja espacio para el ícono */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .input-icono input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+@media (max-width: 768px) 
+{
+  body {
+    font-size: 16px;
+  }
+
+
+  .auth_template img{
+    width: 75%;
+    height: auto;
+  }
+
+  .login-form
+  {
+width: 100%;
+margin:0 auto;
+
+}
+  .auth_template {
+    width: 80%;
+  }
+
+  .auth_title{
+    font-size: 16px;
+  }
+  .auth_title_slogan{
+    font-size: 14px;
+  }
+}
+

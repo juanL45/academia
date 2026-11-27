@@ -1,0 +1,17 @@
+/* Logo en la barra lateral (Panel principal) */
+#jazzy-logo .brand-image {
+    max-height: 50px !important; /* Ajusta la altura deseada */
+    width: auto !important;      /* Mantiene la proporción */
+    box-shadow: none !important; /* Opcional: quita la sombra por defecto */
+}
+
+/* Si quieres ocultar el texto al lado del logo para que el logo ocupe más ancho */
+#jazzy-logo .brand-text {
+    display: none;
+}
+
+/* Logo en la pantalla de inicio de sesión (Login) */
+.login-logo img {
+    max-height: 100px;
+    width: auto;
+}
